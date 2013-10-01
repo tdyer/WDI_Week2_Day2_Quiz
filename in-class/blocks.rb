@@ -1,3 +1,4 @@
+require_relative 'my_array'
 # Why?
 # Blocks are used frequently in Ruby and in Rails. The most common use
 # of blocks are used in iterators, as we'll see
@@ -57,21 +58,25 @@ students = ['frodo baggins', 'samwise gamgee', 'peregrin took', 'meriadoc brandy
 
 # 10.downto(1) { puts "Almost new years" }
 
-class MyArray < Array
-
-  def my_each
-    for i in self
-      # puts "i is #{i}"
-      # yield(i)
-      yield(i) if block_given?
-    end
-  end
-end
-
 a1 = MyArray.new(["one", "three", 44,  "sixty six", ])
 # puts a1.class
 # puts a1
 #puts  a1.my_each
 # a1.my_each { |el| puts "el is #{el}"}
 # a1.my_each
+
+# inject
+a2 = MyArray.new([3, 5, 7])
+total = a2.inject(0) do |sum, el|
+  # puts "el = #{el}"
+  # puts "sum = #{sum}"
+  sum += el + 2
+end
+
+puts "total = #{total}"
+
+# fetch
+
+# what is self ??????????
+puts "#{a2.whats_self}"
 
