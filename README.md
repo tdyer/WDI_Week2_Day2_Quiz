@@ -20,10 +20,9 @@
 
 ###Activity:
 You will create two methods in the MyArray class
-- Create a sequence method on the MyArray class
-MyArray#sequence(n, m, c), will generate a sequence of n numbers
-  (m*i + c) and pass them to a block. (i is each Fixnum element in the 
-array)
+- Create a sequence method on the GA::Sequence class, GA::Sequence#sequence(n,
+  m, c), that will generate a sequence of n numbers (m*i + c) and pass
+  them to a block. (i is each Fixnum element in the array)
 
 - Look up the Hash#fetch method in the Ruby docs and implement a
   method named Hash#my_fetch on the Hash method that will perform
